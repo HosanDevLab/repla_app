@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "138008476993",
+    "project_id": "re-pla",
+    "storage_bucket": "re-pla.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:138008476993:android:a5ac513ad5cd74a00135c0",
+        "android_client_info": {
+          "package_name": "com.hosandevlab.repla"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "138008476993-hifrkjmq25lel4eb5q5g941nonp4m36m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hosandevlab.repla",
+            "certificate_hash": "c4730a17d4072b9ccaf451a851893ff0f40131eb"
+          }
+        },
+        {
+          "client_id": "138008476993-2e8kd7etkd7b5d8ner1od0io8q9rta19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoIdXGLe65zpvNCi-QKTj-AWhr88WEtus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "138008476993-2e8kd7etkd7b5d8ner1od0io8q9rta19.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

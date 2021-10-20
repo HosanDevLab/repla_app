@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hosandevlab.repla.repla_app">
    <application
-        android:label="repla_app"
+        android:label="리플라"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
