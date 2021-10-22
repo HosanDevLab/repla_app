@@ -44,6 +44,7 @@ class _ScanPageState extends State<ScanPage> {
           this.controller = controller;
           controller.scannedDataStream.listen((scanData) {
             controller.pauseCamera();
+            controller.dispose();
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(

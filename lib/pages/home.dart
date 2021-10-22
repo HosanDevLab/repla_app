@@ -114,22 +114,36 @@ class _HomePageState extends State<HomePage> {
                             Divider(height: 20, thickness: 0.6),
                             Container(
                               padding: EdgeInsets.fromLTRB(10, 2, 10, 4),
-                              child: Text('내가 구입한 플라스틱',
+                              child: Text('내가 구매한 플라스틱 제품',
                                   style: Theme.of(context).textTheme.headline6),
                             ),
-                            Column(
-                              children: (snapshot.data[1] as List).map((e) {
-                                final product = e.data();
+                            snapshot.data[1].length > 0
+                                ? Column(
+                                    children: (snapshot.data[1] as List)
+                                        .where((e) =>
+                                            e.data()['isDeleted'] != true)
+                                        .map((e) {
+                                      final product = e.data();
 
-                                return Card(
-                                  child: ListTile(
-                                    onTap: () {},
-                                    title: Text(product['name']),
-                                    subtitle: Text('${product['price']}원'),
+                                      return Card(
+                                        child: ListTile(
+                                          onTap: () {},
+                                          title: Text(product['name']),
+                                          subtitle:
+                                              Text('${product['price']}원'),
+                                        ),
+                                      );
+                                    }).toList(),
+                                  )
+                                : Center(
+                                    heightFactor: 3,
+                                    child: Text(
+                                      '구매한 플라스틱이 하나도 없습니다!',
+                                      style:
+                                          Theme.of(context).textTheme.caption,
+                                    ),
                                   ),
-                                );
-                              }).toList(),
-                            ),
+                            Divider(height: 20, thickness: 0.6),
                           ],
                         ),
                       ),

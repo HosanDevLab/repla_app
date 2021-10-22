@@ -5,6 +5,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:package_info/package_info.dart';
+import 'package:repla_app/pages/hardware.dart';
 import 'package:repla_app/pages/home.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -106,6 +107,20 @@ class _MainDrawerState extends State<MainDrawer> {
                       });
                 },
               ),
+              Divider(height: 0),
+              ListTile(
+                title: Text('하드웨어 클라이언트'),
+                dense: true,
+                leading: Icon(Icons.memory),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => HardwarePage()));
+                },
+              ),
+              Divider(height: 0),
               Divider(height: 0),
               ListTile(
                 title: Text('설정'),
