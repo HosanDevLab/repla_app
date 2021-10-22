@@ -67,6 +67,8 @@ class _HomePageState extends State<HomePage> {
                 }
 
                 final user = snapshot.data[0].data();
+                final data = (snapshot.data[1] as List)
+                    .where((e) => e.data()['isDeleted'] != true);
 
                 return RefreshIndicator(
                   child: SizedBox(
@@ -117,12 +119,9 @@ class _HomePageState extends State<HomePage> {
                               child: Text('내가 구매한 플라스틱 제품',
                                   style: Theme.of(context).textTheme.headline6),
                             ),
-                            snapshot.data[1].length > 0
+                            data.isNotEmpty
                                 ? Column(
-                                    children: (snapshot.data[1] as List)
-                                        .where((e) =>
-                                            e.data()['isDeleted'] != true)
-                                        .map((e) {
+                                    children: data.map((e) {
                                       final product = e.data();
 
                                       return Card(
